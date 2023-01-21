@@ -262,6 +262,7 @@ function showErrors(node: any): void {
             <p><b>Birthday:</b> {{ student.birthdate || "-" }}</p>
           </div>
           <div class="flex gap-2 text-xs font-light text-slate-900">
+            <p><b>Faculty: </b>{{ student.faculty ? student.faculty : "-" }}</p>
             <p><b>Major: </b>{{ student.major ? student.major : "-" }}</p>
             <p><b>Student ID: </b>{{ student.stuId || "-" }}</p>
           </div>

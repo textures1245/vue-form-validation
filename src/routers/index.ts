@@ -29,7 +29,7 @@ const router = createRouter({
 //* redirect path configuration
 router.beforeEach((to, from, next) => {
   if (to.path === "/") {
-    next("/form-app");
+    next("/application-overview");
   } else {
     next();
   }

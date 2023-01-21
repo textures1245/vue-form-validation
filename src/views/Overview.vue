@@ -8,12 +8,16 @@ const playground = [
 ];
 
 const feature = {
-  validation: [
+  validation: <string[]>[
     "Form had validation feature",
     "It will prevent submit behavior if some were invalid.",
     "It will show and alert invalid message when input are/is invalid ",
     "All input has it own rule of validation.",
     "When submitted, all field were cleared out (reset form)",
+  ],
+  utilities: <string[]>[
+    "Using TailwindCSS For customization",
+    "Responsive Layout",
   ],
 };
 
@@ -26,12 +30,12 @@ const permission = {
 <template>
   <div>
     <div class="container overflow-visible h-full w-full border-0 mx-auto">
-      <div class="my-8 py-5 border-0 md:border-2 rounded-sm h-full w-full top-">
+      <div class="my-8 py-3 border-0 md:border-2 rounded-sm h-full w-full top-">
         <h1 class="badge relative badge-lg font-bold -top-8 left-6">
           Student UI Creation Form
         </h1>
         <div class="mx-2">
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-2">
             <div class="">
               <p
                 class="font-mono text-primary xl:text-xl text-lg font-semibold"
@@ -58,6 +62,16 @@ const permission = {
               >
                 <li v-for="validation of feature.validation">
                   {{ validation }}
+                </li>
+              </ul>
+              <p class="text-accent ml-2 mt-2 text-base font-mono">
+                Utilities
+              </p>
+              <ul
+                class="ml-2 font-base lg:text-base text-sm text-accent-focus break-words list-disc list-inside"
+              >
+                <li v-for="utill of feature.utilities">
+                  {{ utill }}
                 </li>
               </ul>
             </div>

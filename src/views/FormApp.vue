@@ -18,9 +18,7 @@ export default {
         stuId: "",
         bio: "",
         picUrl: "",
-        utilities: {
-          bgColor: "#e2e8f0",
-        },
+        bgColor: "#e2e8f0",
       },
       id: -1,
       store,
@@ -44,10 +42,8 @@ export default {
           faculty: "",
           stuId: "",
           bio: "",
-          utilities: {
-            bgColor: "#e2e8f0",
-            picUrl: "",
-          },
+          picUrl: "",
+          bgColor: "#e2e8f0",
         };
       });
       Swal.fire({
@@ -210,7 +206,7 @@ function showErrors(node: any): void {
                   :inner-class="{
                     'text-xs': true,
                   }"
-                  v-model.lazy="student.picUrl"
+                  v-model="student.picUrl"
                 />
                 <FormKit
                   type="color"
@@ -220,7 +216,7 @@ function showErrors(node: any): void {
                   :inner-class="{
                     'min-w-full': true,
                   }"
-                  v-model.lazy="student.utilities.bgColor"
+                  v-model.lazy="student.bgColor"
                 />
               </div>
             </div>
@@ -247,7 +243,7 @@ function showErrors(node: any): void {
       <!--- Bio  -->
       <div class="h-full gap-3 flex flex-col">
         <div
-          :style="`background: rgb(32,32,32); background: linear-gradient(0deg, rgba(32,32,32,1) 0%, ${student.utilities.bgColor} 100%);`"
+          :style="`background: rgb(32,32,32); background: linear-gradient(0deg, rgba(32,32,32,1) 0%, ${student.bgColor} 100%);`"
           class="flex basis-2/4 justify-end w-full"
         >
           <img

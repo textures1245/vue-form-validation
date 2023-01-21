@@ -17,9 +17,9 @@ export default {
         faculty: "",
         stuId: "",
         bio: "",
+        picUrl: "",
         utilities: {
           bgColor: "#e2e8f0",
-          picUrl: "",
         },
       },
       id: -1,
@@ -32,7 +32,8 @@ export default {
   methods: {
     async onSubmit(node: any) {
       await new Promise((r) => setTimeout(r, 1000)).then(() => {
-        let studentData: StudentType = { ...this.student };
+        let studentData = <StudentType>{ ...this.student };
+        console.log(studentData);
         this.store.studentState.push(studentData);
         this.$formkit.reset("student-form");
         this.student = <StudentType>{
@@ -123,7 +124,6 @@ function showErrors(node: any): void {
           id="student-form"
           form-class="$reset"
           :actions-class="{ 'flex justify-center': true }"
-          #default="{ value }"
           @submit="onSubmit"
         >
           <div class="flex items-center flex-col h-full">
@@ -210,7 +210,7 @@ function showErrors(node: any): void {
                   :inner-class="{
                     'text-xs': true,
                   }"
-                  v-model.lazy="student.utilities.picUrl"
+                  v-model.lazy="student.picUrl"
                 />
                 <FormKit
                   type="color"
@@ -251,7 +251,7 @@ function showErrors(node: any): void {
           class="flex basis-2/4 justify-end w-full"
         >
           <img
-            :src.lazy="student.utilities.picUrl"
+            :src.lazy="student.picUrl"
             class="object-cover relative mr-6 bg-gray-400 h-1/4 md:top-3/4 xl:top-2/4 top-[4rem] w-32 min-h-[8rem] border-2 rounded-full"
           />
         </div>

@@ -26,7 +26,7 @@ export default {
             <div class="flex items-center space-x-3">
               <div class="avatar">
                 <div class="mask mask-squircle w-12 h-12">
-                  <img :src="stu.utilities.picUrl" :alt="stu.name" />
+                  <img :src="stu.picUrl" :alt="stu.name" />
                 </div>
               </div>
               <div class="">

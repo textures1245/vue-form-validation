@@ -6,16 +6,16 @@ import OverviewApp from "../views/Overview.vue";
 
 //* use routers
 const routes = [
+  { path: "/", name: "OverviewApp", component: OverviewApp },
   {
     path: "/form-app",
-    name: FormApp,
+    name: "FormApp",
     component: FormApp,
     children: [
       { path: "student-id/:stuIndex", name: FormApp, component: FormApp },
     ],
   },
-  { path: "/student-list", name: StudentList, component: StudentList },
-  { path: "/application-overview", name: OverviewApp, component: OverviewApp },
+  { path: "/student-list", name: "StudentList", component: StudentList },
 ];
 
 // type NewType = Readonly<RouteRecordRaw[]>;
@@ -29,7 +29,7 @@ const router = createRouter({
 //* redirect path configuration
 router.beforeEach((to, from, next) => {
   if (to.matched.length === 0) {
-    next("/application-overview");
+    next("/");
   } else {
     next();
   }

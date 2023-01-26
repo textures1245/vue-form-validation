@@ -29,6 +29,7 @@ export default {
   },
   methods: {
     async onSubmit(node: any) {
+      
       await new Promise((r) => setTimeout(r, 1000)).then(() => {
         let studentData = <StudentType>{ ...this.student };
         console.log(studentData);

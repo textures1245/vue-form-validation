@@ -30,8 +30,8 @@ const permission = {
 <template>
   <div>
     <div class="container overflow-visible h-full w-full border-0 mx-auto">
-      <div class="my-8 py-3 border-0 md:border-2 rounded-sm h-full w-full top-">
-        <h1 class="badge relative badge-lg font-bold -top-8 left-6">
+      <div class="my-8 py-3 border-0 rounded-sm h-full w-full top-">
+        <h1 class="badge relative badge-lg font-bold -top-4 left-6">
           Student UI Creation Form
         </h1>
         <div class="mx-2">

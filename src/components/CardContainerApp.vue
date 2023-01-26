@@ -23,7 +23,7 @@ export default {
 </template>
 <style scoped>
 .card-h {
-  height: 34rem;
+  height: 37rem;
   min-height: 34rem;
   overflow-y: auto;
 }
